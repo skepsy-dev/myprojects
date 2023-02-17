@@ -1,0 +1,381 @@
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('font/LuloClean.woff2') format('woff2'),
+        url('font/LuloClean.woff') format('woff');
+}
+
+
+body {
+    background-color: #222222;
+    font-family: 'MyWebFont';
+    /* text-align: center; */
+}
+
+
+.loginCta{
+    color: #fffada;
+    font-family: 'MyWebFont';
+    text-align: center;
+}
+
+
+/* Project Table Header */
+
+.projHeaderAddy {
+    color: #fffada;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10px;
+    display: inline;
+}
+.projHeader {
+    color: #fffada;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20px;
+    display: inline;
+}
+
+/* Project Table Data */
+
+.newProjIcon {
+    max-width: 25px;
+    height: auto;
+    padding-left: 9%;
+    padding-bottom: 15px;
+    float: left;
+}
+
+.project_table {
+    text-align: center;
+    width: 90%;
+    border-radius: 3px;
+    background-color: #fffada;
+    margin: auto;
+    font-family: 'MyWebFont';
+    font-size: 14px;
+}
+
+.table_header {
+    font-family: 'MyWebFont';
+    font-size: 13px;
+    color: grey;
+}
+
+.table_data {
+    font-size: 7px;
+}
+
+.proj_edit_btn {
+    font-family: 'MyWebFont';
+
+}
+
+.proj_delete_btn {
+
+}
+
+
+.webIcon {
+    max-width: 15px;
+    height: auto;
+    padding-left: 5px;
+}
+
+.editIcon {
+    max-width: 20px;
+    height: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+/* Add New Project Modal */
+
+.addNewProj-bg-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.addNewProj-modal {
+    height: auto;
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+input {
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.addNewProj-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 42px;
+    color: #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.addNewProj-close:hover {
+    color: #666;
+}
+
+
+
+/* Edit Project Modal */
+
+.editProj-bg-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.editProj-modal {
+    height: auto;
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+.editProj-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 42px;
+    color: #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.editProj-close:hover {
+    color: #666;
+}
+
+
+/* Delete Project Modal */
+
+.deleteProj-bg-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteProj-modal {
+    height: auto;
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+.deleteProj-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 42px;
+    color: #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.deleteProj-close:hover {
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start NavBar */
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+    color: white;
+}
+
+.navLogo {
+    width: auto;
+    height: 45px;
+    /* float: left; */
+    padding-top: 3%;
+    padding-left: 10%;
+}
+
+.ckNana {
+    width: auto;
+    height: 27px;
+    margin-right: 10px;
+    /* transform: rotate(20deg); */
+}
+
+/* .balBtn {
+    margin-top: 4px;
+    width: 90px;
+    height: 20px;
+    font-size: 11px;
+    padding-left: 13px;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-image: url("images/eth_logo.png");
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: 1px;
+} */
+
+.loginBtn {
+    /* background-color: aquamarine; */
+    font-family: 'MyWebFont';
+    background-color: #fffada;
+    border-radius: 3px;
+    width: 90px;
+    height: 25px;
+    font-size: 11px;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logoutBtn {
+    width: auto;
+    height: 17px;
+    padding: 5px 5px 0px 5px;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: none;
+}
+
+/* .navbar-links li:hover {
+    border-bottom: 2px solid white;
+} */
+
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 1px;
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: row;
+        margin-left: 55%;
+        /* padding-bottom: 150px; */
+    }
+
+    .navbar-links ul li {
+        text-align: right;
+        
+    }
+
+    .navbar-links ul li a {
+        /* padding: .5rem 1rem; */ 
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* End NavBar */
+
+
