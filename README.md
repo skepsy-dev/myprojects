@@ -2,9 +2,9 @@
 
 single page php web app.
 
-data table showing entries from logged in user.
-
 user logged in via web.js eth address.
+
+on successful log in, call to showproj.php to show data table of sql entries from logged in "user_address".
 
 table forms:
 
