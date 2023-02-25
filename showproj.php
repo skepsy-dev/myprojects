@@ -6,16 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Projs</title>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <?php
-    $q = $_GET['q'];
+    $q = '';
+    if (isset($_GET['data'])) {
+        $q = $_GET['data'];
+    } else {
+        $q = $_GET['q'];
+    }
+    // $q = '0xd78e5ade2cdc907688a4feb888ef6c60c0a16f53';
 
     $connection = mysqli_connect("localhost", "root", "");
     if (!$connection) {
@@ -28,7 +34,7 @@
 
     $projsheader = "'s Projects";
 
-    echo '<h2 class="projHeaderAddy" >' . $q . '</h2>';
+    echo '<h2 class="projHeaderAddy" >' . substr($q, 0, 8) . '...</h2>';
     echo '<h2 class="projHeader" >' . $projsheader . '</h2> <br><br><br>';
     echo '<div>
             <a href="#" id="addNewProj-button" onclick="insertAdd(), showAddNew()"><img class="newProjIcon" src="images/icons/new_icon.png" alt="New Icon "></a>
@@ -52,19 +58,22 @@
 
 
         echo "<tbody>
-                        <tr>
+                        <tr id='row_data$row[proj_id]'>
                             <td style='display:none;'>$row[user_address]</td>
                             <td style='display:none;'>$row[proj_id]</td>
                             <td>$row[mint_date]</td>
                             <td>$row[project_name]</td>
                             <td>$row[mintlist]</td>
                             <td>$row[price]</td>
+                            <td style='display:none;'>$row[website]</td>
                             <td><a href='$row[website]' target='_blank'><img class='webIcon' src='images/icons/weblink-icon.png' alt='Project Website Link'></a></td>
+                            <td style='display:none;'>$row[twitter]</a></td>
                             <td><a href='$row[twitter]' target='_blank'><img class='webIcon' src='images/logos/twitter-logo.png' alt='Project Twitter Link'></></a></td>
+                            <td style='display:none;'>$row[note]</textarea></td>
                             <td><textarea rows='1' cols='10'>$row[note]</textarea></td>
                             <td> 
-                                <a href='#' class='editbtn' id='editProj-button' onclick='showEditProj()'><img class='editIcon' src='images/icons/edit-icon.png' alt='Edit Proj'></a>
-                                <a href='#' class='deletebtn' id='deleteProj-button' onclick='showDeleteProj()'><img class='editIcon' src='images/icons/delete_icon.png' alt='Delete Proj'></a>
+                                <a href='#' class='editbtn' id='editProj-button' onclick='showEditProj($row[proj_id])'><img class='editIcon' src='images/icons/edit-icon.png' alt='Edit Proj'></a>
+                                <a href='#' class='deletebtn' id='deleteProj-button' onclick='showDeleteProj($row[proj_id])'><img class='editIcon' src='images/icons/delete_icon.png' alt='Delete Proj'></a>
                             </td>
                         </tr>
                     </tbody>";

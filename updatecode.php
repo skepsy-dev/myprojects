@@ -24,7 +24,8 @@ $db = mysqli_select_db($connection, 'myprojects');
         if($query_run)
         {
             echo '<script> alert("Project Updated"); </script>';
-            header("Location:index.html");
+            // header("Location:index.html");
+            header('Location: index.php?data='.$user_address);
         }
         else
         {

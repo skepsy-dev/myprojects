@@ -20,7 +20,7 @@ if(isset($_POST['insertdata']))
     if($query_run)
     {
         echo '<script> alert("Data Saved"); </script>';
-        header('Location: index.html');
+        header('Location: index.php?data='.$user_address);
     }
     else
     {
