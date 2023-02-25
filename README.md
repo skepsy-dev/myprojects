@@ -5,7 +5,6 @@ single page php web app.
 user logged in via web.js eth address.
 
 on successful log in, call to showproj.php to show data table of sql entries from logged in "user_address".
-if no entries to read "Add a new project. Your home to store your safe links."
 
 table forms:
 
