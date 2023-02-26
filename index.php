@@ -64,43 +64,45 @@
                 <div class="addNewProj-close">+</div>
             </div>
 
-            <fieldset>
-                <form action="insertcode.php" method="POST">
+            <form action="insertcode.php" method="POST">
 
-                    <input class="" name="user_address" id="loggedInAddy" value="<?php if(isset($_GET['data'])){ echo $_GET['data']; } ?>">
+                <input type="hidden" name="user_address" id="loggedInAddy" value="<?php if (isset($_GET['data'])) {
+                                                                                        echo $_GET['data'];
+                                                                                    } ?>">
+
+
+                <div class="">
                     <input class="" type="date" name="mint_date">
+                    <select class="" name="mintlist">
+                        <option value="" selected hidden>Status...</option>
+                        <option value="Whitelist">No</option>
+                        <option value="wl Pending">Pending</option>
+                        <option value="wl Needed">Yes</option>
+                    </select>
+                </div>
 
-                    <div class="">
-                        <input type="text" name="project_name" class="" placeholder="Project Name...">
-                        <select class="" name="mintlist">
-                            <option value="" selected hidden>Status...</option>
-                            <option value="Whitelist">Whitelist</option>
-                            <option value="wl Pending">WL Pending</option>
-                            <option value="wl Needed">Need WL</option>
-                        </select>
-                    </div>
+                <input type="text" name="project_name" class="" placeholder="Project Name...">
 
-                    <div class="">
-                        <img class="webIcon" src="images/logos/eth-logo.png" alt="Ethereum">
-                        <input class="" type="float" name="price" placeholder="Price...">
-                    </div>
+                <div class="">
+                    <img class="ethIcon" src="images/logos/eth-logo.png" alt="Ethereum">
+                    <input class="ethInput" type="float" name="price" placeholder="Price...">
+                </div>
 
-                    <div>
-                        <input class="" type="url" d="website" name="website" placeholder="Website url...">
-                    </div>
-                    <div>
-                        <input class="" type="url" id="twitter" name="twitter" placeholder="Twitter url...">
-                    </div>
-                    <div>
-                        <textarea class="" id="note" name="note" rows="5" cols="30" placeholder="Notes | copy and pasta info..."></textarea>
-                    </div>
+                <div>
+                    <input class="" type="url" d="website" name="website" placeholder="Website url...">
+                </div>
+                <div>
+                    <input class="" type="url" id="twitter" name="twitter" placeholder="Twitter url...">
+                </div>
+                <div>
+                    <textarea class="" id="note" name="note" rows="5" cols="30" placeholder="Notes | copy and pasta info..."></textarea>
+                </div>
 
-                    <div class="">
-                        <button type="submit" name="insertdata" class="">Save Project</button>
-                    </div>
+                <div class="">
+                    <button type="submit" name="insertdata" class="saveNewProjbtn">Save Project</button>
+                </div>
 
-                </form>
-            </fieldset>
+            </form>
 
         </div>
     </div>
@@ -115,47 +117,46 @@
                 <div class="editProj-close">+</div>
             </div>
 
-            <fieldset>
-                <form action="updatecode.php" method="POST">
+            <form action="updatecode.php" method="POST">
+
+                <div class="">
+                    <input class="" type="hidden" name="edit_user_address" id="edit_user_address">
+                    <input class="" type="hidden" name="edit_proj_id" id="edit_proj_id">
 
                     <div class="">
-                        <input class="" type="text" name="edit_user_address" id="edit_user_address">
-                        <input class="" type="text" name="edit_proj_id" id="edit_proj_id">
                         <input class="" type="date" id="edit_mint_date" name="edit_mint_date">
-
-
-                        <div class="">
-                            <input type="text" name="edit_project_name" id="edit_project_name" placeholder="Project Name...">
-                            <select class="" name="edit_mintlist" id="edit_mintlist">
-                                <option value="" selected hidden>Status...</option>
-                                <option value="Whitelist">Whitelist</option>
-                                <option value="wl Pending">WL Pending</option>
-                                <option value="wl Needed">Need WL</option>
-                            </select>
-                        </div>
-
-                        <div class="">
-                            <img class="webIcon" src="images/logos/eth-logo.png" alt="Ethereum">
-                            <input class="" type="float" name="edit_price" id="edit_price" placeholder="Price...">
-                        </div>
-
-                        <div>
-                            <input class="" type="url" id="edit_website" name="edit_website" placeholder="Website url...">
-                        </div>
-                        <div>
-                            <input class="" type="url" id="edit_twitter" name="edit_twitter" placeholder="Twitter url...">
-                        </div>
-                        <div>
-                            <textarea class="" id="edit_note" name="edit_note" rows="5" cols="30" placeholder="Notes | copy and pasta info..."></textarea>
-                        </div>
+                        <select class="" name="edit_mintlist" id="edit_mintlist">
+                            <option value="" selected hidden>Status...</option>
+                            <option value="Whitelist">No</option>
+                            <option value="wl Pending">Pending</option>
+                            <option value="wl Needed">Yes</option>
+                        </select>
                     </div>
+
+                    <input type="text" name="edit_project_name" id="edit_project_name" placeholder="Project Name...">
 
                     <div class="">
-                        <button type="submit" name="updatedata" class="">Update Project</button>
+                        <img class="ethIcon" src="images/logos/eth-logo.png" alt="Ethereum">
+                        <input class="ethInput" type="float" name="edit_price" id="edit_price" placeholder="Price...">
                     </div>
 
-                </form>
-            </fieldset>
+                    <div>
+                        <input class="" type="url" id="edit_website" name="edit_website" placeholder="Website url...">
+                    </div>
+                    <div>
+                        <input class="" type="url" id="edit_twitter" name="edit_twitter" placeholder="Twitter url...">
+                    </div>
+                    <div>
+                        <textarea class="" id="edit_note" name="edit_note" rows="5" cols="30" placeholder="Notes | copy and pasta info..."></textarea>
+                    </div>
+                </div>
+
+                <div class="">
+                    <button type="submit" name="updatedata" class="editProjbtn">Update Project</button>
+                </div>
+
+            </form>
+
         </div>
     </div>
 
@@ -169,21 +170,18 @@
                 <div class="deleteProj-close">+</div>
             </div>
 
-            <fieldset>
-                <form action="deletecode.php" method="POST">
+            <form action="deletecode.php" method="POST">
 
-                    <div class="">
+                <div class="">
 
-                        <input type="hidden" name="delete_user_address" id="delete_user_address">
-                        <input type="hidden" name="delete_id" id="delete_id">
-                        <input type="text" name="delete_name" id="delete_name">
-                    </div>
-                    <div class="">
-                        <button type="submit" name="deletedata" class="btn btn-primary"> Yes !! Delete it. </button>
-                    </div>
-                </form>
-            </fieldset>
-
+                    <input type="hidden" name="delete_user_address" id="delete_user_address">
+                    <input type="hidden" name="delete_id" id="delete_id">
+                    <input class="deletProjTitle" type="text" name="delete_name" id="delete_name">
+                </div>
+                <div class="">
+                    <button type="submit" name="deletedata" class="deleteProjbtn"> Yes !! Delete it. </button>
+                </div>
+            </form>
 
         </div>
     </div>

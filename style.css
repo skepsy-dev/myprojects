@@ -22,6 +22,10 @@ body {
 
 /* Project Table Header */
 
+.loggedHeader {
+    text-align: center;
+}
+
 .projHeaderAddy {
     color: #fffada;
     white-space: nowrap;
@@ -98,19 +102,19 @@ body {
 
 .addNewProj-bg-modal {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
 }
 
 .addNewProj-modal {
     height: auto;
     width: 400px;
-    background-color: white;
+    background-color: #fffada;
     text-align: center;
     position: relative;
     border-radius: 4px;
@@ -119,6 +123,41 @@ body {
 input {
     margin: 5px auto;
     padding: 5px;
+    background-color: #fffada;
+    border: solid #222222 1px;
+    border-radius: 4px;
+    font-family: 'MyWebFont';
+}
+
+select {
+    background-color: #fffada;
+    border: solid #222222 1px;
+    border-radius: 4px;
+    font-family: 'MyWebFont';
+}
+
+textarea {
+    background-color: #fffada;
+    border: solid #222222 1px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.ethIcon {
+    max-width: 30px;
+    height: auto;
+}
+
+.ethInput {
+    max-width: 235px;
+}
+
+.saveNewProjbtn {
+    background-color: #fffada;
+    border: solid #222222 1px;
+    border-radius: 4px;
+    margin: 20px 0px;
+    font-family: 'MyWebFont';
 }
 
 .addNewProj-close {
@@ -153,10 +192,18 @@ input {
 .editProj-modal {
     height: auto;
     width: 400px;
-    background-color: white;
+    background-color: #fffada;
     text-align: center;
     position: relative;
     border-radius: 4px;
+}
+
+.editProjbtn {
+    background-color: #fffada;
+    border: solid #222222 1px;
+    border-radius: 4px;
+    margin: 20px 0px;
+    font-family: 'MyWebFont';
 }
 
 .editProj-close {
@@ -190,11 +237,25 @@ input {
 .deleteProj-modal {
     height: auto;
     width: 400px;
-    background-color: white;
+    background-color: #fffada;
     text-align: center;
     position: relative;
     border-radius: 4px;
 }
+
+
+.deletProjTitle {
+    text-align: center;
+}
+
+.deleteProjbtn {
+    background-color: #fffada;
+    border: solid #222222 1px;
+    border-radius: 4px;
+    margin: 20px 0px;
+    font-family: 'MyWebFont';
+}
+
 
 .deleteProj-close {
     position: absolute;
@@ -290,6 +351,7 @@ input {
     width: auto;
     height: 17px;
     padding: 5px 5px 0px 5px;
+    cursor: pointer;
 }
 
 .brand-title {

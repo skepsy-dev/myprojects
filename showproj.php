@@ -8,7 +8,7 @@
     <title>Show Projs</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
     <script src="script.js" defer></script>
 </head>
 
@@ -34,8 +34,9 @@
 
     $projsheader = "'s Projects";
 
-    echo '<h2 class="projHeaderAddy" >' . substr($q, 0, 8) . '...</h2>';
-    echo '<h2 class="projHeader" >' . $projsheader . '</h2> <br><br><br>';
+    echo '<div class="loggedHeader"> <h3 class="projHeaderAddy" >' . substr($q, 0, 5) . '...</h3>
+            <h3 class="projHeader" >' . $projsheader . '</h3>
+        </div> <br>';
     echo '<div>
             <a href="#" id="addNewProj-button" onclick="insertAdd(), showAddNew()"><img class="newProjIcon" src="images/icons/new_icon.png" alt="New Icon "></a>
             <br>
