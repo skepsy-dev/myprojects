@@ -384,7 +384,7 @@ textarea {
     border-bottom: 2px solid white;
 } */
 
-.toggle-button {
+/* .toggle-button {
     position: absolute;
     top: 1.25rem;
     right: 1rem;
@@ -421,7 +421,7 @@ textarea {
         width: 100%;
         flex-direction: row;
         margin-left: 55%;
-        /* padding-bottom: 150px; */
+        padding-bottom: 150px;
     }
 
     .navbar-links ul li {
@@ -430,13 +430,13 @@ textarea {
     }
 
     .navbar-links ul li a {
-        /* padding: .5rem 1rem; */ 
+        padding: .5rem 1rem; 
     }
 
     .navbar-links.active {
         display: flex;
     }
-}
+} */
 
 /* End NavBar */
 

@@ -18,9 +18,9 @@
     <nav class="navbar">
         <div class="brand-title"><img class="navLogo" src="images/logos/mt-logo-white.png" alt="MyTxns"></div>
         <a href="#" class="toggle-button">
+            <!-- <span class="bar"></span>
             <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span> -->
         </a>
         <div class="navbar-links">
             <ul>
@@ -74,7 +74,7 @@
                 <div class="">
                     <input class="" type="date" name="mint_date">
                     <select class="" name="mintlist">
-                        <option value="" selected hidden>Status...</option>
+                        <option value="" selected hidden>Mint List?</option>
                         <option value="Whitelist">No</option>
                         <option value="wl Pending">Pending</option>
                         <option value="wl Needed">Yes</option>
@@ -126,7 +126,7 @@
                     <div class="">
                         <input class="" type="date" id="edit_mint_date" name="edit_mint_date">
                         <select class="" name="edit_mintlist" id="edit_mintlist">
-                            <option value="" selected hidden>Status...</option>
+                            <option value="" selected hidden>Mint List?</option>
                             <option value="Whitelist">No</option>
                             <option value="wl Pending">Pending</option>
                             <option value="wl Needed">Yes</option>
