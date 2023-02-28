@@ -8,11 +8,11 @@
     <title>Show Projs</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
+<a style="display:none;"><button class="" id="loginButton2">Login2</button></a>
 
     <?php
     $q = '';
@@ -29,7 +29,7 @@
     }
 
     mysqli_select_db($connection, "myprojects");
-    $query = "SELECT * FROM projects WHERE user_address = '" . $q . "'";
+    $query = "SELECT * FROM projects WHERE user_address = '" . $q . "' ORDER BY mint_date ASC";
     $result = mysqli_query($connection, $query);
 
     $projsheader = "'s Projects";

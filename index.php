@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projs New</title>
+    <title>My Projects</title>
     <link rel="icon" type="image/icon type" href="images/ms_logo_blk.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
@@ -33,7 +33,6 @@
                             ?>
                                 Login
                             <?php  } ?></button></a></li>
-                <li style="display:none;"><a><button class="" id="loginButton2">Login2</button></a></li>
                 <li><a><img class="logoutBtn" id="logoutButton" onclick="logout()" src="images/icons/logout_symbol.png" alt="logout"></a>
                 </li>
             </ul>
@@ -75,9 +74,9 @@
                     <input class="" type="date" name="mint_date">
                     <select class="" name="mintlist">
                         <option value="" selected hidden>Mint List?</option>
-                        <option value="Whitelist">No</option>
-                        <option value="wl Pending">Pending</option>
-                        <option value="wl Needed">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Yes">Yes</option>
                     </select>
                 </div>
 
@@ -127,9 +126,9 @@
                         <input class="" type="date" id="edit_mint_date" name="edit_mint_date">
                         <select class="" name="edit_mintlist" id="edit_mintlist">
                             <option value="" selected hidden>Mint List?</option>
-                            <option value="Whitelist">No</option>
-                            <option value="wl Pending">Pending</option>
-                            <option value="wl Needed">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Yes">Yes</option>
                         </select>
                     </div>
 

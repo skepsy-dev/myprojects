@@ -55,19 +55,36 @@ document.getElementById('loginButton').addEventListener('click', event => {
         // }); 
 });
 document.getElementById('loginButton2').addEventListener('click', event => {
-      let account;
-      let button = event.target;
+  let account;
+  let button = event.target;
 
-      // connect to address
-      ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
-        account = accounts[0];
-        // account = '0xd78e5ade2cdc907688a4feb888ef6c60c0a16f53';
-        // web3Utils.toChecksumAddress(account);
-        console.log(account);
-        button.textContent = account;
-       
-        loggedAddress.push(account);
-        }); 
+  // connect to address
+  ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+    account = accounts[0];
+    // account = '0xd78e5ade2cdc907688a4feb888ef6c60c0a16f53';
+    // web3Utils.toChecksumAddress(account);
+    console.log(account);
+    button.textContent = account;
+   
+    loggedAddress.push(account);
+
+    // show projects on login btn click
+    if (account == "") {
+      document.getElementById("showprojs").innerHTML="";
+      return;
+    }
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+      if (this.readyState==4 && this.status==200) {
+        document.getElementById("showprojs").innerHTML=this.responseText;
+      }
+    }
+
+    xmlhttp.open("GET","showproj.php?q="+account);
+    xmlhttp.send();
+
+
+  });
 });
 window.onload = function(){
   document.getElementById('loginButton2').click();
